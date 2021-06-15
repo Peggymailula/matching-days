@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matching Days</title>
+    <link rel='stylesheet' href="matching.css">
+    <link rel='stylesheet' href="simple-grid/grid/simple-grid.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+
+    <script type="text/x-template"  class="userTemplate">
+      {{#each days}}
+      <li class="{{color}}" id="color">
+          {{day}}
+      </li>
+  {{/each}}
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Matching Days</h1>
+    <div class="info">
+      Please enter two separate dates. If the entered dates do not fall on the same day of the week, the first date will be highlighted in red and the second date in blue. However, if the two entered dates fall on the same day of the week,the day will be highlighted in green.
+     
+    </div>
+    <br>
+    <div class="col-12">
+    <div >
+      <ul class="userData" id="horizontal-list">
+
+      </ul>
+       
+       
+      </div>
+    </div>
+<div class='col-12'>
+      <div class="first col-6">
+        <br>
+        <br>
+          <label class="label1" for="date1">First Date:</label>
+          <input name="date1" type="date" id="input1" class="datum1" />
+      </div>
+
+      <div class="second col-6">
+        <br>
+        <br>
+          <label class="label2" for="date2">Second Date:</label>
+          <input  name="date2" type="date" class="datum2" id="input2" />
+      </div>
+</div>
+    </div>
+  </div>
+</body>
+<script src="matching.js"></script>
+<script src="matching-factory.js"></script>
+</html>
